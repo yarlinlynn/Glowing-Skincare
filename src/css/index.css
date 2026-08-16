@@ -5,67 +5,68 @@
 /* imported fonts, colors, shadows, text sizes etc */
 @theme {
 
-  /* Colors */
+  /* breakpoints */
+    --breakpoint-xs: 575px;
+    --breakpoint-sm: 768px;
+    --breakpoint-md: 992px;
+    /* --breakpoint-lg: 1200px; */
+    --breakpoint-xl: 1400px;
 
-  --color-hoockers-green-20: hsl(148 20% 38% / 0.2);
-  --color-hoockers-green: hsl(148 20% 38%);
-  --color-pale-spring-bud: hsl(60 68% 85%);
+    /* Colors */
+    --hoockers-green_20: hsl(148, 20%, 38%, 0.2);
+    --pale-spring-bud: hsl(60, 68%, 85%);
+    --hoockers-green: hsl(148, 20%, 38%);
+    --hoockers-green: hsl(148, 20%, 38%);
+    --spanish-gray: hsl(0, 0%, 61%);
+    --light-gray: hsl(0, 0%, 80%);
+    --cultured-1: hsl(0, 0%, 97%);
+    --cultured-2: hsl(60, 6%, 93%);
+    --gray-web: hsl(0, 0%, 49%);
+    --white_30: hsl(0, 0%, 100%, 0.3);
+    --black_70: hsla(0, 0%, 0%, 0.7);
+    --black_50: hsla(0, 0%, 0%, 0.5);
+    --black_15: hsla(0, 0%, 0%, 0.15);
+    --black_10: hsla(0, 0%, 0%, 0.1);
+    --black_5: hsla(0, 0%, 0%, 0.05);
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
 
-  --color-spanish-gray: hsl(0 0% 61%);
-  --color-light-gray: hsl(0 0% 80%);
+    --gradient: linear-gradient(to right, transparent 50%, var(--white_30) 100%);
 
-  --color-cultured-1: hsl(0 0% 97%);
-  --color-cultured-2: hsl(60 6% 93%);
+    /* Typography */
+    --ff-urbanist: 'Urbanist', sans-serif;
 
-  --color-gray-web: hsl(0 0% 49%);
+    --fs-1: 4.8rem;
+    --fs-2: 4rem;
+    --fs-3: 3.4rem;
+    --fs-4: 2.4rem;
+    --fs-5: 2rem;
+    --fs-6: 1.8rem;
+    --fs-7: 1.5rem;
+    --fs-8: 1.4rem;
+    --fs-9: 1.3rem;
 
-  --color-white: hsl(0 0% 100%);
-  --color-white-30: hsl(0 0% 100% / 0.3);
+    --section-padding: 35px;
 
-  --color-black: hsl(0 0% 0%);
-  --color-black-70: hsl(0 0% 0% / 0.7);
-  --color-black-50: hsl(0 0% 0% / 0.5);
-  --color-black-15: hsl(0 0% 0% / 0.15);
-  --color-black-10: hsl(0 0% 0% / 0.1);
-  --color-black-5: hsl(0 0% 0% / 0.05);
+    /* Shadows */
+    --shadow-1: 0 8px 16px var(--black_15);
+    --shadow-2: 0 4px 10px var(--black_5);
 
+    /* Radius */
+    --radius-3: 3px;
 
-  /* Typography */
+    --transition-1: 0.25s ease;
+    --transition-2: 0.5s ease;
+    --transition-3: 1s ease;
 
-  --font-urbanist: "Urbanist", sans-serif;
-
-
-  /* Shadows */
-
-  --shadow-1: 0 8px 16px hsl(0 0% 0% / 0.15);
-  --shadow-2: 0 4px 10px hsl(0 0% 0% / 0.05);
-
-
-  /* Radius */
-
-  --radius-3: 3px;
-
-
-  /* Easing */
-
-  --ease-cubic-in: cubic-bezier(
-    0.51,
-    0.03,
-    0.64,
-    0.28
-  );
-
-  --ease-cubic-out: cubic-bezier(
-    0.33,
-    0.85,
-    0.4,
-    0.96
-  );
+    /* Easing */
+    --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+    --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
 }
 
 /* utility classes here */
 /* @utility {
-
+ xs:max-w-[unset] : :is(.header, .hero) .container
 } */
 
 /* base styles or reset styles */
@@ -76,7 +77,7 @@
   }
 
   body {
-    @apply bg-white text-gray-web font-urbanist;
+    @apply bg-white text-[var(--grey-web)] font-[var(--ff-urbanist)];
     @apply text-base font-medium leading-relaxed;
   }
 
@@ -114,4 +115,34 @@
 }
 
 /* components classes here */
-/* @layer components {} */
+@layer components {
+    .container {
+        @apply px-[15px] xs:max-w-[540px] xs:w-full xs:mx-auto sm:max-w-[750px] md:max-w-[960px] lg:max-w-[1300px];
+    }
+
+    .line {
+      @apply h-[2px] bg-[var(--black)];
+    }
+
+    .input-wrapper {
+      @apply hidden lg:block relative;
+    }
+
+    .search-field {
+      @apply text-[var(--fs-7)] border-2 border-[var(--hoockers-green_20)] rounded-[var(--radius-3)] p-[10px_20px] outline-none transition-[var(--transition-1)] pe-[40px];
+    }
+
+    @media (min-width: 1200px) {
+        .navbar-link::after {
+          content: "";
+          @apply absolute bottom-0 left-0 w-full h-px
+               bg-[var(--black)]
+                transition-[var(--transition-1)]
+                scale-x-0 origin-left;
+        }
+
+        .navbar-link:hover::after {
+          @apply scale-x-100;
+        }
+    }
+}
