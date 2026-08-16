@@ -1,6 +1,6 @@
 
 import { Alert } from "./alert.js";
-// import mobile view
+import { Sidebar } from "./sidebar.js";
 
 export function Header() {
     return `

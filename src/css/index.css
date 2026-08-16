@@ -145,4 +145,20 @@
           @apply scale-x-100;
         }
     }
+
+    .mobile-nav {
+      @apply fixed top-0 bottom-0 left-0 w-full max-w-[350px] p-[25px_40px] z-[6] bg-[var(--white)] -translate-x-full invisible transition-all duration-[250ms] ease-[var(--cubic-in)];
+    }
+
+    .mobile-nav.active {
+      @apply translate-x-0 visible transition-all duration-[400ms] ease-[var(--cubic-out)];
+    }
+
+    .overlay {
+      @apply bg-transparent fixed inset-0 z-5 pointer-events-none transition-[var(--transition-1)];
+    }
+
+    .overlay.active {
+      @apply bg-[var(--black_50)] pointer-events-auto;
+    }
 }
