@@ -261,4 +261,8 @@
       @apply text-[var(--gray-web)] text-[1.5rem] font-[var(--fw-500)] mx-[10px];
       content: ":";
     }
+
+    .social-link:is(:hover, :focus) { 
+      color: var(--hoockers-green); 
+    }
 }
