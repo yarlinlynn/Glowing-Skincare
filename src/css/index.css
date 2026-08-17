@@ -164,7 +164,8 @@
       @apply py-[var(--section-padding)]
     }
 
-    .hero {
+    .hero,
+    .collection {
       @apply pbs-0
     }
 
@@ -195,5 +196,60 @@
     .btn-primary,
     .btn-secondary:is(:hover, :focus) {
         @apply bg-[var(--black)] text-[var(--white)];
+    }
+
+    .has-before,
+    .has-after {
+      @apply relative z-[1];
+    }
+
+    .has-before::before,
+    .has-after::after {
+      @apply absolute content-[''];
+    }
+
+    .hover\:shine {
+      @apply overflow-hidden
+    }
+
+    .hover\:shine .has-bg-image {
+      @apply absolute top-0 right-0 bottom-0 left-0 -z-[1];
+
+      transition: var(--transition-2);
+    }
+
+    .hover\:shine:is(:hover, :focus) .has-bg-image {
+      transform: scale(1.15);
+    }
+
+    .hover\:shine::before {
+      @apply absolute top-0 bottom-0 left-[-140%] w-full z-[1];
+
+      content: "";
+      background-image: var(--gradient);
+      transform: skewX(-25deg);
+      transition: var(--transition-2);
+    }
+
+    .hover\:shine:is(:hover, :focus-within)::before {
+      animation: shine 1s ease forwards;
+    }
+
+    @keyframes shine {
+      0% {
+        transform: skewX(-25deg) translateX(0);
+      }
+      100% {
+        transform: skewX(-25deg) translateX(250%);
+      }
+    }
+
+    .hover\:shine:hover::before {
+      @apply left-[140%];
+    }
+
+    .hover\:shine .has-bg-image {
+      @apply bg-no-repeat bg-cover bg-center absolute top-0 left-0 right-0 bottom-0 z-[-1] transition-[var(--transition-2)];
+      transition: var(--transition-2);
     }
 }
