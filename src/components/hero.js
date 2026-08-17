@@ -2,9 +2,9 @@
 export function Hero() {
     return `
         <section class="hero" id="home" aria-label="hero" data-section>
-            <div class="container xs:max-w-none">
-                <ul class="flex gap-[15px] pbe-[15px]">
-                    <li class="min-w-full">
+            <div class="container xs:max-w-none overflow-hidden">
+                <ul class="hero-slider flex gap-[15px] pbe-[15px]">
+                    <li class="hero-slide min-w-full">
                         <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-1.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">
@@ -20,7 +20,7 @@ export function Hero() {
                         </div>
                     </li> 
 
-                    <li class="min-w-full">
+                    <li class="hero-slide min-w-full">
                         <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-2.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">
@@ -36,7 +36,7 @@ export function Hero() {
                         </div>
                     </li> 
 
-                    <li class="min-w-full">
+                    <li class="hero-slide min-w-full">
                         <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-3.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">

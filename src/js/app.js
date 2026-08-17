@@ -6,6 +6,7 @@ import { Hero } from "../components/hero.js";
 
 import { initNavigation } from "../utils/initSidebar.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
+import { heroSlideShow } from "../utils/heroSlide.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#app").innerHTML = `
@@ -17,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initNavigation();
   sectionAnimations();
+  heroSlideShow();
 });
