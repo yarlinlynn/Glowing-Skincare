@@ -5,6 +5,8 @@ import { Header } from "../components/header.js";
 import { Hero } from "../components/hero.js";
 import { Collection } from "../components/collection.js";
 
+import { Banner } from "../components/banner.js";
+
 import { initNavigation } from "../utils/initSidebar.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
 import { heroSlideShow } from "../utils/heroSlide.js";
@@ -15,6 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     <main>
       ${Hero()}
       ${Collection()}
+
+      ${Banner()}
     </main>
   `;
 

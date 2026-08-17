@@ -2,7 +2,7 @@
 export function Collection() {
     return `
         <section class="collection" id="collection" aria-label-"collection" data-section>
-            <div class="container lg:max-w-[1300px]">
+            <div class="container xs:max-w-[540px] sm:max-w-[730px] md:max-w-[960px] lg:max-w-[1300px]">
                 <ul class="grid gap-4 md:grid-cols-3 md:gap-[30px]">
                     <li>
                         <div class="bg-[var(--light-gray)] min-h-100 p-10 pbe-[30px] flex flex-col has-before has-after hover:shine">
