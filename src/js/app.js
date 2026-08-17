@@ -7,6 +7,7 @@ import { Collection } from "../components/collection.js";
 
 import { Banner } from "../components/banner.js";
 import { Feature } from "../components/feature.js";
+import { Offer } from "../components/offer.js";
 
 import { initNavigation } from "../utils/initSidebar.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
@@ -21,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       ${Banner()}
       ${Feature()}
+      ${Offer()}
     </main>
   `;
 

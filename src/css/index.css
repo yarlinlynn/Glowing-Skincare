@@ -252,4 +252,13 @@
       @apply bg-no-repeat bg-cover bg-center absolute top-0 left-0 right-0 bottom-0 z-[-1] transition-[var(--transition-2)];
       transition: var(--transition-2);
     }
+
+    .badge {
+      @apply bg-[var(--hoockers-green)] text-[var(--white)] font-bold px-3 rounded-[var(--radius-3)] max-w-max;
+    }
+
+    .time:not(:last-child)::after {
+      @apply text-[var(--gray-web)] text-[1.5rem] font-[var(--fw-500)] mx-[10px];
+      content: ":";
+    }
 }
