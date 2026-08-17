@@ -258,7 +258,7 @@
     }
 
     .time:not(:last-child)::after {
-      @apply text-[var(--gray-web)] text-[1.5rem] font-[var(--fw-500)] mx-[10px];
+      @apply text-[var(--gray-web)] text-[3.5rem] font-[var(--fw-500)] mx-[10px];
       content: ":";
     }
 
