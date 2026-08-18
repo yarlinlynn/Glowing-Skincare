@@ -9,7 +9,7 @@ export function Banner() {
                         <h2 class="text-shadow-[0_0_2px_var(--cultured-2)] mt-[10px] mb-[30px]">
                             Discover Our Autumn Skincare
                         </h2>
-                        <a href="#" class="btn bg-[var(--white)] text-[var(--black)]">Explore More</a>
+                        <a href="#" class="btn btn-secondary">Explore More</a>
                         <div class="bg-[url('../public/images/banners/banner-1.jpg')] has-bg-image"></div>
                     </li>
 
@@ -18,7 +18,7 @@ export function Banner() {
                         <h2 class="text-shadow-[0_0_2px_var(--cultured-2)] mt-[10px] mb-[30px]">
                             Discover Our Autumn Skincare
                         </h2>
-                        <a href="#" class="btn bg-[var(--white)] text-[var(--black)]">Explore More</a>
+                        <a href="#" class="btn btn-secondary">Explore More</a>
                         <div class="bg-[url('../public/images/banners/banner-2.jpg')] has-bg-image"></div>
                     </li>
                 </ul>

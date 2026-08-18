@@ -30,10 +30,10 @@ export function Offer() {
 
                     <div id="countdown" class="text-[var(--hoockers-green)] leading-none flex my-5 mt-5 mb-10">
 
-                        <span class="flex items-center text-[4rem] time" aria-label="days">15</span>
-                        <span class="flex items-center text-[4rem] time" aria-label="hours">21</span>
-                        <span class="flex items-center time text-[4rem]" aria-label="minutes">46</span>
-                        <span class="flex items-center time text-[4rem]" aria-label="seconds">08</span>
+                        <span class="flex items-center text-[3rem] lg:text-[4rem] time" aria-label="days">15</span>
+                        <span class="flex items-center text-[3rem] lg:text-[4rem] time" aria-label="hours">21</span>
+                        <span class="flex items-center text-[3rem] time lg:text-[4rem]" aria-label="minutes">46</span>
+                        <span class="flex items-center text-[3rem] time lg:text-[4rem]" aria-label="seconds">08</span>
 
                     </div>
 

@@ -199,8 +199,14 @@
 
     .btn-primary,
     .btn-secondary:is(:hover, :focus) {
-        @apply bg-[var(--black)] text-[var(--white)];
+      @apply bg-[var(--black)] text-[var(--white)];
     }
+
+    .btn-secondary {
+      background-color: var(--white);
+      color: var(--black);
+      box-shadow: var(--shadow-2);
+  }
 
     .has-before,
     .has-after {
@@ -266,7 +272,7 @@
     }
 
     .time:not(:last-child)::after {
-      @apply text-[var(--gray-web)] text-[3.5rem] font-[var(--fw-500)] mx-[10px];
+      @apply text-[var(--gray-web)] text-[2.5rem] lg:text-[3.5rem] font-[var(--fw-500)] mx-[10px];
       content: ":";
     }
 
