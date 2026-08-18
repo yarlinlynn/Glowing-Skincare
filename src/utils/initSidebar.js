@@ -18,6 +18,7 @@ function openSidebar() {
     const navbar = sidebar.querySelector("[data-navbar]");
     const closeNav = sidebar.querySelector("[data-nav-close]");
     const overlay = sidebar.querySelector("[data-overlay]");
+    const navLinks = sidebar.querySelectorAll("a[href^='#']");
 
     // activate sidebar
     requestAnimationFrame( () => {
@@ -28,6 +29,12 @@ function openSidebar() {
     // close sidebar and remove overlay
     closeNav.addEventListener("click", closeSidebar);
     overlay.addEventListener("click", closeSidebar);
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            closeSidebar();
+        });
+    });
 }
 
 // close and remove sidebar mobile navigation

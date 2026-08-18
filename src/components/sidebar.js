@@ -10,22 +10,22 @@ export function Sidebar() {
                     </a>
 
                     <button class="nav-close-btn text-[var(--hoockers-green)] text-[28px]" aria-label="close menu" data-nav-close>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m336-280-56-56 144-144-144-143 56-56 144 144 143-144 56 56-144 143 144 144-56 56-143-144-144 144Z"/></svg>
+                        <i class="ri-close-fill"></i>
                     </button>
                 </div>
 
-                <ul>
+                <ul class="flex flex-col gap-[10px]">
                     <li>
-                        <a href="#home" class=" text-[var(--black)] font-bold uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)]">Home</a>
+                        <a href="#home" class=" text-[var(--black)] font-medium uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)] hover:text-[var(--hoockers-green)]">Home</a>
                     </li>
                     <li>
-                        <a href="#collection" class="text-[var(--black)] font-bold uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)]">Collection</a>
+                        <a href="#collection" class="text-[var(--black)] font-medium uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)] hover:text-[var(--hoockers-green)]">Collection</a>
                     </li>
                     <li>
-                        <a href="#shop" class="text-[var(--black)] font-bold uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)]">Shop</a>
+                        <a href="#shop" class="text-[var(--black)] font-medium uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)] hover:text-[var(--hoockers-green)]">Shop</a>
                     </li>
                     <li>
-                        <a href="#offer" class="text-[var(--black)] font-bold uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)]">Offer</a>
+                        <a href="#offer" class="text-[var(--black)] font-medium uppercase transition-[var(--transition-1)] tracking-[1px] py-[5px] text-[var(--fs-9)] hover:text-[var(--hoockers-green)]">Offer</a>
                     </li>
                 </ul>
             </div>
