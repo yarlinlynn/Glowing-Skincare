@@ -5,6 +5,7 @@ import { Header } from "../components/header.js";
 import { Hero } from "../components/hero.js";
 import { Collection } from "../components/collection.js";
 import { BestSeller } from "../components/bestSeller.js";
+import { under$50 } from "../components/under50.js";
 import { Banner } from "../components/banner.js";
 import { Feature } from "../components/feature.js";
 import { Offer } from "../components/offer.js";
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       ${Hero()}
       ${Collection()}
       ${BestSeller()}
+      ${under$50()}
       ${Banner()}
       ${Feature()}
       ${Offer()}
