@@ -4,7 +4,7 @@ import "../css/index.css";
 import { Header } from "../components/header.js";
 import { Hero } from "../components/hero.js";
 import { Collection } from "../components/collection.js";
-
+import { BestSeller } from "../components/bestSeller.js";
 import { Banner } from "../components/banner.js";
 import { Feature } from "../components/feature.js";
 import { Offer } from "../components/offer.js";
@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <main>
       ${Hero()}
       ${Collection()}
-
+      ${BestSeller()}
       ${Banner()}
       ${Feature()}
       ${Offer()}
