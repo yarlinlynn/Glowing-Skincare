@@ -14,7 +14,6 @@ import { Footer } from "../components/footer.js";
 
 import { initNavigation } from "../utils/initSidebar.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
-import { heroSlideShow } from "../utils/heroSlide.js";
 import { countdown } from "../utils/countdown.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -35,6 +34,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
   initNavigation();
   sectionAnimations();
-  heroSlideShow();
   countdown();
 });

@@ -37,7 +37,7 @@ export function Offer() {
 
                     </div>
 
-                    <button onclick="" class="btn btn-primary">Get Only $39.00</button>
+                    <button onclick="" class="btn btn-primary over:bg-[var(--hoockers-green)]">Get Only $39.00</button>
                 </div>
             </div>
         </section>
