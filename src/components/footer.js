@@ -3,7 +3,7 @@ export function Footer() {
     return `
         <footer class="bg-[var(--cultured-1)] py-[70px] font-thin text-[var(--black_50)] md:pt-[100px] md:pb-[80px]" data-section>
             <div class="container xs:max-w-[540px] sm:max-w-[730px] md:max-w-[960px] lg:max-w-[1300px]">
-                <div class="grid gap-[40px] mbe-15 sm:grid-cols-3 md:grid-cols-[0.4fr_0.4fr_0.4fr_1fr] md:mb-[120px] lg:items-baseline">
+                <div class="grid gap-[40px] mbe-15 sm:grid-cols-3 lg:grid-cols-[0.4fr_0.4fr_0.4fr_1fr] md:mb-[120px] lg:items-baseline">
                     <ul>
                         <li>
                             <p class="font-semibold text-[var(--black)] text-[1rem] mbe-[10px]">Company</p>
@@ -60,7 +60,7 @@ export function Footer() {
                         </li>
                     </ul>
 
-                    <div class="col-[1/4] lg:col-auto">
+                    <div class="sm:col-start-1 sm:col-end-4 lg:col-auto">
                         <p class="text-[var(--black)] font-semibold text-[1.8rem] leading-[1.3]">Good emails.</p>
                         <p class="leading-[2] mt-2.5 mb-[35px] font-light">
                             Enter your email below to be the first to know about new collections and product launches.

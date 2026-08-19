@@ -181,14 +181,6 @@
       @apply translate-y-0 opacity-100;
     }
 
-    /* .hero-slider {
-      @apply duration-700 transition-[var(--transition-3)] ease-[var(--cubic-out)] will-change-transform;
-    }
-
-    .hero-slide {
-      @apply shrink-0;
-    } */
-
     .hero-card {
       @apply bg-[var(--light-gray)] py-[100px] px-[15px] bg-[40%] bg-no-repeat bg-cover
     }
