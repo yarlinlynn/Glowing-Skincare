@@ -30,17 +30,21 @@ export function Header() {
                         <button aria-label="user" class="hidden text-[28px] transition-[var(--transition-1)] relative lg:block">
                             <i class="ri-user-line"></i>
                         </button>
-                        <button aria-label="favourites" class="hidden text-[28px] transition-[var(--transition-1)] relative lg:block">
+                        <button type="button" aria-label="favourites" data-open-panel="favourites"
+                            class="hidden text-[28px] transition-[var(--transition-1)] relative lg:block"
+                        >
                             <i class="ri-heart-line"></i>
 
-                            <span class="absolute top-0 -right-[10px] bg-[var(--black)] text-[var(--white)] text-[12.4px] min-w-[18px] h-[18px] leading-[1.4] rounded-[20px] font-bold">0</span>
+                            <span class="btn-badge">0</span>
                         </button>
-                        <button aria-label="cart" class="text-[28px] transition-[var(--transition-1)] relative lg:flex lg:items-center lg:gap-[10px]">
+                        <button type="button" aria-label="cart" data-open-panel="cart" 
+                            class="text-[28px] transition-[var(--transition-1)] relative lg:flex lg:items-center lg:gap-[10px]"
+                        >
                             <data class="mt-[3px] text-[14px] font-bold hidden lg:block" value="0">$0.00</data>
 
                             <i class="ri-shopping-bag-4-line"></i>
 
-                            <span id="cart-btn-badge" class="absolute top-0 -right-[10px] bg-[var(--black)] text-[var(--white)] text-[12.4px] min-w-[18px] h-[18px] leading-[1.4] rounded-[20px] font-bold">0</span>
+                            <span class="btn-badge">0</span>
                         </button>
                     </div>
 

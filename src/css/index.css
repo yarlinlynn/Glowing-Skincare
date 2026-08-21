@@ -179,6 +179,10 @@
       @apply absolute bottom-0 left-0 w-full py-[17px] bg-[var(--white)] z-[4];
     }
 
+    .btn-badge {
+      @apply absolute top-[5px] -right-[8px] bg-[var(--black)] text-[var(--white)] text-[12.4px] min-w-[18px] h-[18px] leading-[1.4] rounded-[20px] font-bold hidden;
+    }
+
     .mobile-nav {
       @apply fixed top-0 bottom-0 left-0 w-full max-w-[350px] p-[25px_40px] z-[6] bg-[var(--white)] -translate-x-full invisible transition-all duration-[250ms] ease-[var(--cubic-in)];
     }
