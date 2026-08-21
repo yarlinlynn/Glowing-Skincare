@@ -15,6 +15,7 @@ import { Footer } from "../components/footer.js";
 import { initNavigation } from "../utils/initSidebar.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
 import { countdown } from "../utils/countdown.js";
+import { fixedHeader } from "../utils/fixedHeader.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#app").innerHTML = `
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   initNavigation();
+  fixedHeader();
   sectionAnimations();
   countdown();
 });

@@ -7,7 +7,7 @@ export function Header() {
         <header class="relative pbe-20 lg:pb-[60px] lg:mb-2.5">
             ${Alert()}
 
-            <div class="header absolute w-full bottom-0 left-0 z-[4] py-[26px] lg:static lg:pt-6 lg:[position:unset] lg:pt-6 lg:pb-1" data-header>
+            <div class="header-top" data-header>
                 <div class="container flex items-center justify-between gap-5 lg:flex-wrap xs:px-[30px] xs:max-w-[unset]">
                     <button class="w-[26px] grid gap-[6px] py-[5px] lg:hidden" aria-label="open menu" data-nav-toggle>
                         <span class="line w-[15px]"></span>
@@ -44,7 +44,7 @@ export function Header() {
                         </button>
                     </div>
 
-                    <nav class="hidden lg:block absolute w-full bottom-0 left-0 bg-[var(--white)] py-[18px] z-[4]">
+                    <nav class="navbar hidden lg:block" data-navbar>
                         <ul class="flex gap-[45px] justify-center">
                             <li>
                                 <a href="#home" class="nav-link relative z-[1] text-[var(--black)] font-bold">Home</a>
