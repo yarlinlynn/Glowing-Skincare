@@ -199,6 +199,14 @@
       @apply bg-[var(--black_50)] pointer-events-auto;
     }
 
+    .side-panel {
+      @apply fixed top-0 right-0 bottom-0 w-full z-[6] max-w-[350px] p-[25px_15px] bg-[var(--white)] translate-x-full  transition-all duration-[250ms] ease-[var(--cubic-in)];
+    }
+
+    .side-panel.active {
+      @apply translate-x-0 visible transition-all duration-400 ease-[var(--cubic-out)];
+    }
+
     section {
       @apply py-[var(--section-padding)]
     }

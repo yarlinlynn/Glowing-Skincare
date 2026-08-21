@@ -11,8 +11,10 @@ import { Feature } from "../components/feature.js";
 import { Offer } from "../components/offer.js";
 import { Blog } from "../components/blog.js";
 import { Footer } from "../components/footer.js";
+import { SidePanel } from "../components/sidePanel.js";
 
 import { initNavigation } from "../utils/initSidebar.js";
+import { openSidePanel } from "../utils/openSidePanel.js";
 import { sectionAnimations } from "../utils/scrollReveal.js";
 import { countdown } from "../utils/countdown.js";
 import { fixedHeader } from "../utils/fixedHeader.js";
@@ -20,6 +22,7 @@ import { fixedHeader } from "../utils/fixedHeader.js";
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#app").innerHTML = `
     ${Header()}
+    ${SidePanel()}
     <main>
       ${Hero()}
       ${Collection()}
@@ -34,6 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
   initNavigation();
+  openSidePanel();
   fixedHeader();
   sectionAnimations();
   countdown();
