@@ -40,11 +40,11 @@ export function ProductCard(product) {
                     <div class="flex items-center justify-center gap-[8px]">
                         ${
                             originalPrice ? `
-                                <del class="font-extralight text-[var(--black_50)]">$39.00</del>
+                                <del class="font-extralight text-[var(--black_50)]">$${originalPrice}</del>
                             ` : ""
                         }
 
-                        <span class="font-semibold">$29.00</span>
+                        <span class="font-semibold">$${price}</span>
                     </div>
 
                     <h3>

@@ -6,8 +6,8 @@ export const products = [
         image: "../public/images/products/product-01.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
-        originalPrice: 3900,
+        price: 2100,
+        originalPrice: 3800,
 
         rating: 5,
         reviewCount: 5170,
@@ -21,7 +21,7 @@ export const products = [
         image: "../public/images/products/product-02.jpg",
         alt: "Bio-shroom Rejuvenating Serum",
 
-        price: 2900,
+        price: 2500,
         originalPrice: null,
 
         rating: 5,
@@ -36,7 +36,7 @@ export const products = [
         image: "../public/images/products/product-03.jpg",
         alt: "Coffee Bean Caffeine Eye Cream",
 
-        price: 2900,
+        price: 3000,
         originalPrice: null,
 
         rating: 5,
@@ -51,7 +51,7 @@ export const products = [
         image: "../public/images/products/product-04.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
+        price: 2500,
         originalPrice: null,
 
         rating: 5,
@@ -66,8 +66,8 @@ export const products = [
         image: "../public/images/products/product-05.jpg",
         alt: "Coffee Bean Caffeine Eye Cream",
 
-        price: 2900,
-        originalPrice: 3900,
+        price: 4500,
+        originalPrice: 5000,
 
         rating: 5,
         reviewCount: 5170,
@@ -81,7 +81,7 @@ export const products = [
         image: "../public/images/products/product-06.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
+        price: 3500,
         originalPrice: null,
 
         rating: 5,
@@ -96,7 +96,7 @@ export const products = [
         image: "../public/images/products/product-07.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
+        price: 3500,
         originalPrice: 3900,
 
         rating: 5,
@@ -141,7 +141,7 @@ export const products = [
         image: "../public/images/products/product-10.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
+        price: 2500,
         originalPrice: null,
 
         rating: 5,
@@ -156,8 +156,8 @@ export const products = [
         image: "../public/images/products/product-11.jpg",
         alt: "Coffee Bean Caffeine Eye Cream",
 
-        price: 2900,
-        originalPrice: 3900,
+        price: 3000,
+        originalPrice: 4000,
 
         rating: 5,
         reviewCount: 5170,
@@ -171,12 +171,27 @@ export const products = [
         image: "../public/images/products/product-01.jpg",
         alt: "Facial cleanser",
 
-        price: 2900,
+        price: 3900,
         originalPrice: null,
 
         rating: 5,
         reviewCount: 5170,
 
         collections: ["under-50"]
+    },
+
+    {
+        id: "product-13",
+        name: "Mountain Pine Bath Oil",
+        image: [
+            "../public/images/banners/offer-banner/offer-banner-1.jpg",
+            "../public/images/banners/offer-banner/offer-banner-2.jpg"
+        ],
+        alt: "Mountain Pine Bath Oil",
+
+        price: 3900,
+        originalPrice: 4875,
+
+        collections: ["offer"]
     }
 ]
