@@ -1,4 +1,6 @@
 
+import { initProductActions } from "../utils/productButtons";
+
 export function ProductCard(product) {
     // calculate discount for product 
     const discount = product.originalPrice ? Math.round( ((product.originalPrice - product.price) / product.originalPrice) * 100 ) : 0;
@@ -20,11 +22,11 @@ export function ProductCard(product) {
                     }
 
                     <div class="card-actions">
-                        <button data-product-id="${product.id}" class="action-btn" aria-label="Add ${product.name} to cart">
+                        <button data-product-id="${product.id}" data-product-action="cart" class="action-btn" aria-label="Add ${product.name} to cart">
                             <i class="ri-shopping-bag-4-line"></i>
                         </button>
 
-                        <button data-product-id="${product.id}" class="action-btn" aria-label="Add ${product.name} to favourites">
+                        <button data-product-id="${product.id}" data-product-action="favourites" class="action-btn" aria-label="Add ${product.name} to favourites">
                             <i class="ri-heart-line"></i>
                         </button>
 
@@ -60,4 +62,6 @@ export function ProductCard(product) {
             </div>
         </li>
     `;
+
+    initProductActions();
 }

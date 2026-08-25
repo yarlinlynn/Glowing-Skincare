@@ -27,7 +27,9 @@ export function Header() {
                     </a>
 
                     <div id="header-actions" class="flex gap-10 items-center">
-                        <button aria-label="user" class="hidden text-[28px] transition-[var(--transition-1)] relative lg:block">
+                        <button type="button" aria-label="user" 
+                            class="hidden text-[28px] transition-[var(--transition-1)] relative lg:block"
+                        >
                             <i class="ri-user-line"></i>
                         </button>
                         <button type="button" aria-label="favourites" data-open-panel="favourites"
@@ -35,16 +37,20 @@ export function Header() {
                         >
                             <i class="ri-heart-line"></i>
 
-                            <span class="btn-badge">0</span>
+                            <span data-favourites-badge class="btn-badge">0</span>
                         </button>
                         <button type="button" aria-label="cart" data-open-panel="cart" 
                             class="text-[28px] transition-[var(--transition-1)] relative lg:flex lg:items-center lg:gap-[10px]"
                         >
-                            <data class="mt-[3px] text-[14px] font-bold hidden lg:block" value="0">$0.00</data>
+                            <data data-cart-total value="0" 
+                                class="mt-[3px] text-[14px] font-bold hidden lg:block" 
+                            >
+                                $0.00
+                            </data>
 
                             <i class="ri-shopping-bag-4-line"></i>
 
-                            <span class="btn-badge">0</span>
+                            <span data-cart-badge class="btn-badge">0</span>
                         </button>
                     </div>
 
