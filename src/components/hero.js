@@ -5,7 +5,7 @@ export function Hero() {
             <div class="container xs:max-w-none">
                 <ul class="has-scrollbar">
                     <li class="min-w-full">
-                        <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-1.jpg')]">
+                        <div class="hero-card bg-[url('/images/banners/hero-banner/hero-banner-1.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">
                                     Reveal The <br>
@@ -21,7 +21,7 @@ export function Hero() {
                     </li> 
 
                     <li class="min-w-full">
-                        <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-2.jpg')]">
+                        <div class="hero-card bg-[url('/images/banners/hero-banner/hero-banner-2.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">
                                     Reveal The <br>
@@ -37,7 +37,7 @@ export function Hero() {
                     </li> 
 
                     <li class="hero-slide min-w-full">
-                        <div class="hero-card bg-[url('../public/images/banners/hero-banner/hero-banner-3.jpg')]">
+                        <div class="hero-card bg-[url('/images/banners/hero-banner/hero-banner-3.jpg')]">
                             <div class="card-content">
                                 <h1 class="text-[4rem]">
                                     Reveal The <br>

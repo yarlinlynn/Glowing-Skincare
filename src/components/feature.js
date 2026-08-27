@@ -10,7 +10,7 @@ export function Feature() {
                         <div class="feature-card">
 
                             <img class="w-[100px] mx-auto"
-                                src="../public/images/features/feature-1.jpg" alt="Guaranteed PURE" loaading="lazy" width="204" height="236"
+                                src="/images/features/feature-1.jpg" alt="Guaranteed PURE" loaading="lazy" width="204" height="236"
                             />
 
                             <h3 class="text-[1.6rem] mt-[35px] mb-[15px]">Guaranteed PURE</h3>
@@ -27,7 +27,7 @@ export function Feature() {
                         <div class="feature-card">
 
                             <img class="w-[100px] mx-auto"
-                                src="../public/images/features/feature-2.jpg" alt="Completely Cruelty-Free" loaading="lazy" width="204" height="236"
+                                src="/images/features/feature-2.jpg" alt="Completely Cruelty-Free" loaading="lazy" width="204" height="236"
                             />
 
                             <h3 class="text-[1.6rem] mt-[35px] mb-[15px]">Completely Cruelty-Free</h3>
@@ -43,7 +43,7 @@ export function Feature() {
                         <div class="feature-card">
 
                             <img class="w-[100px] mx-auto"
-                                src="../public/images/features/feature-3.jpg" alt="Ingredient Sourcing" loaading="lazy" width="204" height="236"
+                                src="/images/features/feature-3.jpg" alt="Ingredient Sourcing" loaading="lazy" width="204" height="236"
                             />
 
                             <h3 class="text-[1.6rem] mt-[35px] mb-[15px]">Ingredient Sourcing</h3>

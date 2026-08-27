@@ -10,7 +10,7 @@ export function Blog() {
                         <div>
                             <figure class="aspect-[700/450] bg-[var(--light-gray)] img-holder has-before has-after hover:shine">
                                 <img class="transition-[var(--transition-2)] w-full h-full object-cover"
-                                    src="../public/images/blog/blog-1.jpg" alt="Find a Store" loaading="lazy" width="700" height="450"
+                                    src="/images/blog/blog-1.jpg" alt="Find a Store" loaading="lazy" width="700" height="450"
                                 />
                             </figure>
 
@@ -30,7 +30,7 @@ export function Blog() {
                         <div>
                             <figure class="aspect-[700/450] bg-[var(--light-gray)] img-holder has-before has-after hover:shine">
                                 <img class="transition-[var(--transition-2)] w-full h-full object-cover"
-                                    src="../public/images/blog/blog-2.jpg" alt="From our Blog" loaading="lazy" width="700" height="450"
+                                    src="/images/blog/blog-2.jpg" alt="From our Blog" loaading="lazy" width="700" height="450"
                                 />
                             </figure>
 
@@ -50,7 +50,7 @@ export function Blog() {
                         <div>
                             <figure class="aspect-[700/450] bg-[var(--light-gray)] img-holder has-before has-after hover:shine">
                                 <img class="transition-[var(--transition-2)] w-full h-full object-cover"
-                                    src="../public/images/blog/blog-3.jpg" alt="Our Story" loaading="lazy" width="700" height="450"
+                                    src="/images/blog/blog-3.jpg" alt="Our Story" loaading="lazy" width="700" height="450"
                                 />
                             </figure>
 

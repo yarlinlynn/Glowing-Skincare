@@ -10,7 +10,7 @@ export function Banner() {
                             Discover Our Autumn Skincare
                         </h2>
                         <a href="#" class="btn btn-secondary">Explore More</a>
-                        <div class="bg-[url('../public/images/banners/banner-1.jpg')] has-bg-image"></div>
+                        <div class="bg-[url('/images/banners/banner-1.jpg')] has-bg-image"></div>
                     </li>
 
                     <li class="min-h-[420px] p-[30px] has-before has-after hover:shine">
@@ -19,7 +19,7 @@ export function Banner() {
                             Discover Our Autumn Skincare
                         </h2>
                         <a href="#" class="btn btn-secondary">Explore More</a>
-                        <div class="bg-[url('../public/images/banners/banner-2.jpg')] has-bg-image"></div>
+                        <div class="bg-[url('/images/banners/banner-2.jpg')] has-bg-image"></div>
                     </li>
                 </ul>
             </div

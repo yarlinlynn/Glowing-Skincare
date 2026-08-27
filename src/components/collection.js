@@ -12,7 +12,7 @@ export function Collection() {
                                 <span>Shop Now</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                             </a>
-                            <div class="has-bg-image bg-[url('../public/images/collections/collection-1.jpg')]"></div>
+                            <div class="has-bg-image bg-[url('/images/collections/collection-1.jpg')]"></div>
                         </div>
                     </li>
 
@@ -24,7 +24,7 @@ export function Collection() {
                                 <span>Discover Now</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                             </a>
-                            <div class="has-bg-image bg-[url('../public/images/collections/collection-2.jpg')]"></div>
+                            <div class="has-bg-image bg-[url('/images/collections/collection-2.jpg')]"></div>
                         </div>
                     </li>
 
@@ -36,7 +36,7 @@ export function Collection() {
                                 <span>Discover Now</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M647-440H160v-80h487L423-744l57-56 320 320-320 320-57-56 224-224Z"/></svg>
                             </a>
-                            <div class="has-bg-image bg-[url('../public/images/collections/collection-3.jpg')]"></div>
+                            <div class="has-bg-image bg-[url('/images/collections/collection-3.jpg')]"></div>
                         </div>
                     </li>
                 </ul>

@@ -23,7 +23,7 @@ export function Header() {
                     </div>
 
                     <a href="#" class="lg:me-15">
-                        <img src="../public/images/logo.png" alt="Glowing" loading="lazy" width="179" height="26"/>
+                        <img src="/images/logo.png" alt="Glowing" loading="lazy" width="179" height="26"/>
                     </a>
 
                     <div id="header-actions" class="flex gap-10 items-center">
