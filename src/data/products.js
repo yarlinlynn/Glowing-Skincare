@@ -183,6 +183,7 @@ export const products = [
     {
         id: "product-13",
         name: "Mountain Pine Bath Oil",
+        description: "Made using clean, non-toxic ingredients, our products are designed for everyone.",
         image: [
             "../public/images/banners/offer-banner/offer-banner-1.jpg",
             "../public/images/banners/offer-banner/offer-banner-2.jpg"

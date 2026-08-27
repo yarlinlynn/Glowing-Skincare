@@ -52,6 +52,34 @@ export function initSidePanel() {
             return;
         }
 
+        // removes product from cart
+        const removeCart = event.target.closest("[data-remove-cart]");
+        if (removeCart) {
+            const productId = removeCart.dataset.removeCart;
+            removeFromCart(productId);
+            renderCart();
+            return;
+        }
+        
+        // increase quantity
+        const increase = event.target.closest("[data-increase-cart]");
+        if (increase) {
+            const productId = increase.dataset.increaseCart;
+            increaseQuantity(productId);
+            renderCart();
+            return;
+        }
+
+        // decrease quantity
+        const decrease = event.target.closest("[data-decrease-cart]");
+        if (decrease) {
+            const productId = decrease.dataset.decreaseCart;
+            decreaseQuantity(productId);
+            renderCart();
+            return;
+        }
+
+
         // close side panel
         const closeBtn = event.target.closest("[data-side-panel-close]");
         if(closeBtn) {
@@ -94,78 +122,76 @@ export function initSidePanel() {
         }
     }
 
-    // render cart content
     function renderCart() {
         const cartItems = getCartItems();
-
         // no products in cart
         if (cartItems.length === 0) {
             content.innerHTML = `
                 <p class="mt-4 text-[var(--black_50)] text-center">
-                    You don't have any favourites yet.
+                    Your cart is empty.
                 </p>
             `;
+
             return;
         }
 
         const cartProducts = cartItems.map(item => {
             const product = products.find(product => product.id === item.id);
             if (!product) return null;
-            return { ...product, quantity: item.quantity}
+            return {...product, quantity: item.quantity};
         }).filter(Boolean);
 
         content.innerHTML = `
             <div class="flex flex-col gap-[20px]">
                 ${
-                    cartProducts.map(product => {
+                   cartProducts.map(product => {
                         const price = product.price / 100;
+                        const image = Array.isArray(product.image) ? product.image[0] : product.image;
                         const itemTotal = price * product.quantity;
 
                         return `
                             <div data-cart-item="${product.id}"
-                                class="flex gap-[15px] border-b border-[var(--black_15)] pb-[20px] relative"
+                                class="flex gap-[15px] border-b border-[var(--black_15)] pb-[20px]"
                             >
-                                <img src="${product.image}" alt="${product.name}" loading="lazy" 
+
+                                <img src="${image}" alt="${product.name}" loading="lazy"
                                     class="w-[80px] h-[100px] object-cover"
                                 />
 
                                 <div class="flex-1">
                                     <h3 class="font-semibold">${product.name}</h3>
 
-                                    <div class="grid items-centergrid-cols-2 ">
+                                    <div class="grid grid-cols-2">
                                         <p class="font-semibold mt-[10px]">$${itemTotal.toFixed(2)}</p>
-                                        <button type="button" data-cart-action="remove"
-                                            data-product-id="${product.id}" class="ml-auto" aria-label="Remove ${product.name} from cart"
+
+                                        <button type="button" data-cart-action="remove" data-product-id="${product.id}"
+                                            class="ml-auto" aria-label="Remove ${product.name} from cart"
                                         >
                                             <i class="ri-delete-bin-line"></i>
                                         </button>
 
-                                        <div 
-                                            class="flex items-center justify-between gap-[10px] col-start-1 col-end-3 bg-[var(--black_5)] px-[10px] py-[5px] rounded-[5px] mt-[15px]"
+                                        <div class="flex items-center justify-between gap-[10px]
+                                            col-start-1 col-end-3 bg-[var(--black_5)] px-[10px] py-[5px] rounded-[5px] mt-[15px]"
                                         >
-                                            <button type="button" data-cart-action="decrease" 
-                                                data-product-id="${product.id}" aria-label="Decrease quantity"
-                                                class="w-[30px] h-[30px] "
+                                            <button type="button" data-cart-action="decrease" data-product-id="${product.id}"
+                                                aria-label="Decrease quantity" class="w-[30px] h-[30px]"
                                             >
                                                 −
                                             </button>
 
                                             <span class="min-w-[20px] text-center">${product.quantity}</span>
 
-                                            <button type="button" data-cart-action="increase"
-                                                data-product-id="${product.id}" aria-label="Increase quantity"
-                                                class="w-[30px] h-[30px]"
+                                            <button type="button" data-cart-action="increase" data-product-id="${product.id}"
+                                                aria-label="Increase quantity" class="w-[30px] h-[30px]"
                                             >
                                                 +
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-
-                                
                             </div>
                         `;
-                    }).join("")
+                   }).join("")
                 }
             </div>
         `;

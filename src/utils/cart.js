@@ -96,6 +96,18 @@ function updateCartButtons() {
         if (icon) {
             icon.className = active ? "ri-shopping-bag-4-fill" : "ri-shopping-bag-4-line";
         }
+        const text = button.querySelector("[data-cart-button-text]");
+        if (text && productId === "product-13") {
+            text.textContent = active ? "Added to Cart" : "Get Only $39.00";
+        }
+        if (productId === "product-13") {
+            button.classList.toggle("bg-[var(--white)]", active);
+            button.classList.toggle("border", active);
+            button.classList.toggle("border-[var(--black)]", active);
+            button.classList.toggle("text-[var(--black)]", active);
+        }
+
+        button.setAttribute("aria-label", active ? "Remove from cart" : "Add to cart");
     });
 }
 
@@ -110,8 +122,13 @@ function updateCartBadge() {
 
 // update cart total inside header
 function updateCartTotal() {
-    const total = document.querySelector("[data-cart-total]");
-    if (!total) return;
-    const cartTotal = getCartTotal();
-    total.textContent = `$${(cartTotal / 100).toFixed(2)}`;
+    const totalElement = document.querySelector("[data-cart-total]");
+    if (!totalElement) return;
+    const total = cartItems.reduce( (sum, item) => {
+        const product = products.find(product => product.id === item.id);
+        if (!product) return sum;
+        return sum + (product.price * item.quantity);
+    }, 0);
+
+    totalElement.textContent = `$${(total / 100).toFixed(2)}`;
 }
