@@ -1,4 +1,5 @@
 
+import { isFavourite } from "../utils/favourites";
 import { initProductActions } from "../utils/productButtons";
 
 export function ProductCard(product) {
@@ -6,6 +7,8 @@ export function ProductCard(product) {
     const discount = product.originalPrice ? Math.round( ((product.originalPrice - product.price) / product.originalPrice) * 100 ) : 0;
     const price = (product.price / 100).toFixed(2);
     const originalPrice = product.originalPrice ? (product.originalPrice / 100).toFixed(2) : null;
+
+    const favourite = isFavourite(product.id);
 
     return `
         <li class="snap-start min-w-full sm:min-w-[calc(50%-15px)] md:min-w-[calc(33.33%-20px)] lg:min-w-[calc(20%-24px)]">
@@ -26,8 +29,8 @@ export function ProductCard(product) {
                             <i class="ri-shopping-bag-4-line"></i>
                         </button>
 
-                        <button data-product-id="${product.id}" data-product-action="favourites" class="action-btn" aria-label="Add ${product.name} to favourites">
-                            <i class="ri-heart-line"></i>
+                        <button data-product-id="${product.id}" data-product-action="favourites" class="action-btn ${favourite ? "text-red-500" : ""}" aria-label="${favourite ? "Remove from favourites" : "Add to favourites"}">
+                            <i class="${favourite ? "ri-heart-fill" : "ri-heart-line"}"></i>
                         </button>
 
                         <button class="action-btn" aria-label="customer service">
@@ -62,6 +65,4 @@ export function ProductCard(product) {
             </div>
         </li>
     `;
-
-    initProductActions();
 }
