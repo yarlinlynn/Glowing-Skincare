@@ -1,6 +1,7 @@
 
-import { getFavouriteIds, toggleFavourite } from "./favourites.js";
 import { products } from "../data/products.js";
+import { getFavouriteIds, toggleFavourite } from "./favourites.js";
+import { getCartItems, increaseCartQuantity, decreaseCartQuantity, removeFromCart, getCartTotal } from "./cart.js";
 
 export function initSidePanel() {
     const panel = document.querySelector("[data-side-panel]");
@@ -15,6 +16,7 @@ export function initSidePanel() {
 
     // click events to open side panel
     document.addEventListener("click", (event) => {
+        // open side panel
         const openBtn = event.target.closest("[data-open-panel]");
         if (openBtn) {
             const type = openBtn.dataset.openPanel;
@@ -28,6 +30,25 @@ export function initSidePanel() {
             const productId = removeBtn.dataset.removeFavourite;
             toggleFavourite(productId);
             renderFavourites();
+            return;
+        }
+
+        // cart functionality
+        const cartButton = event.target.closest("[data-cart-action]");
+        if (cartButton) {
+            const productId = cartButton.dataset.productId;
+            const action = cartButton.dataset.cartAction;
+            if (action === "increase") {
+                increaseCartQuantity(productId);
+            }
+            if (action === "decrease") {
+                decreaseCartQuantity(productId);
+            }
+            if (action === "remove") {
+                removeFromCart(productId);
+            }
+
+            renderCart();
             return;
         }
 
@@ -75,10 +96,78 @@ export function initSidePanel() {
 
     // render cart content
     function renderCart() {
+        const cartItems = getCartItems();
+
+        // no products in cart
+        if (cartItems.length === 0) {
+            content.innerHTML = `
+                <p class="mt-4 text-[var(--black_50)] text-center">
+                    You don't have any favourites yet.
+                </p>
+            `;
+            return;
+        }
+
+        const cartProducts = cartItems.map(item => {
+            const product = products.find(product => product.id === item.id);
+            if (!product) return null;
+            return { ...product, quantity: item.quantity}
+        }).filter(Boolean);
+
         content.innerHTML = `
-            <p class="mt-4 text-[var(--black_50)] text-center">
-                Your cart is empty.
-            </p>
+            <div class="flex flex-col gap-[20px]">
+                ${
+                    cartProducts.map(product => {
+                        const price = product.price / 100;
+                        const itemTotal = price * product.quantity;
+
+                        return `
+                            <div data-cart-item="${product.id}"
+                                class="flex gap-[15px] border-b border-[var(--black_15)] pb-[20px] relative"
+                            >
+                                <img src="${product.image}" alt="${product.name}" loading="lazy" 
+                                    class="w-[80px] h-[100px] object-cover"
+                                />
+
+                                <div class="flex-1">
+                                    <h3 class="font-semibold">${product.name}</h3>
+
+                                    <div class="grid items-centergrid-cols-2 ">
+                                        <p class="font-semibold mt-[10px]">$${itemTotal.toFixed(2)}</p>
+                                        <button type="button" data-cart-action="remove"
+                                            data-product-id="${product.id}" class="ml-auto" aria-label="Remove ${product.name} from cart"
+                                        >
+                                            <i class="ri-delete-bin-line"></i>
+                                        </button>
+
+                                        <div 
+                                            class="flex items-center justify-between gap-[10px] col-start-1 col-end-3 bg-[var(--black_5)] px-[10px] py-[5px] rounded-[5px] mt-[15px]"
+                                        >
+                                            <button type="button" data-cart-action="decrease" 
+                                                data-product-id="${product.id}" aria-label="Decrease quantity"
+                                                class="w-[30px] h-[30px] "
+                                            >
+                                                −
+                                            </button>
+
+                                            <span class="min-w-[20px] text-center">${product.quantity}</span>
+
+                                            <button type="button" data-cart-action="increase"
+                                                data-product-id="${product.id}" aria-label="Increase quantity"
+                                                class="w-[30px] h-[30px]"
+                                            >
+                                                +
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        `;
+                    }).join("")
+                }
+            </div>
         `;
     }
 

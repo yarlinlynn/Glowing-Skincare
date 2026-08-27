@@ -20,6 +20,7 @@ import { countdown } from "../utils/countdown.js";
 import { fixedHeader } from "../utils/fixedHeader.js";
 import { initProductActions } from "../utils/productButtons.js";
 import { updateFavouriteUI } from "../utils/favourites.js";
+import { updateCartUI } from "../utils/cart.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#app").innerHTML = `
@@ -45,4 +46,5 @@ document.addEventListener("DOMContentLoaded", () => {
   countdown();
   initProductActions();
   updateFavouriteUI();
+  updateCartUI();
 });

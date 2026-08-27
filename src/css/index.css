@@ -200,7 +200,7 @@
     }
 
     .side-panel {
-      @apply fixed top-0 right-0 bottom-0 w-full z-[6] max-w-[350px] p-[25px_15px] bg-[var(--white)] translate-x-full  transition-all duration-[250ms] ease-[var(--cubic-in)];
+      @apply fixed top-0 right-0 bottom-0 w-full z-[6] max-w-[390px] p-[25px_15px] bg-[var(--white)] translate-x-full  transition-all duration-[250ms] ease-[var(--cubic-in)];
     }
 
     .side-panel.active {

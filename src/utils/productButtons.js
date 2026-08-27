@@ -1,6 +1,7 @@
 
 import { products } from "../data/products";
 import { toggleFavourite } from "./favourites";
+import { addToCart } from "./cart";
 
 // add click events to products render inside shop component to either add to cart/favoruites 
 export function initProductActions() {
@@ -13,9 +14,9 @@ export function initProductActions() {
 
         const product = products.find(product => product.id === productId);
         if (!product) return;
-        // if (action === "cart") {
-        //     addToCart(product);
-        // }
+        if (action === "cart") {
+            addToCart(product.id);
+        }
         if (action === "favourites") {
             toggleFavourite(product.id)
         }
