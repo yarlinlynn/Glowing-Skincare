@@ -330,4 +330,12 @@
     .shop-card .action-btn:is(:hover, :focus) {
       @apply bg-[var(--black)] text-[var(--white)];
     }
+
+    .back-top-btn {
+      @apply fixed bottom-[20px] right-[30px] bg-[var(--white)] text-[var(--hoockers-green)] text-[20px] py-[5px] px-[10px] rounded-full shadow-[var(--shadow-1)] z-4 opacity-0 invisible transition-[var(--transition-1)];
+    }
+
+    .back-top-btn.active {
+      @apply opacity-100 visible -translate-y-2.5;
+    }
 }

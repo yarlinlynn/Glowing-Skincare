@@ -12,6 +12,7 @@ import { Offer } from "../components/offer.js";
 import { Blog } from "../components/blog.js";
 import { Footer } from "../components/footer.js";
 import { SidePanel } from "../components/sidePanel.js";
+import { BackToTop } from "../components/BackToTop.js";
 
 import { initNavigation } from "../utils/initSidebar.js";
 import { initSidePanel } from "../utils/openSidePanel.js";
@@ -21,6 +22,7 @@ import { fixedHeader } from "../utils/fixedHeader.js";
 import { initProductActions } from "../utils/productButtons.js";
 import { updateFavouriteUI } from "../utils/favourites.js";
 import { updateCartUI } from "../utils/cart.js";
+import { BackToTopActive } from "../utils/BackToTopActive.js";
 
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelector("#app").innerHTML = `
@@ -37,6 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
       ${Blog()}
     </main>
     ${Footer()}
+
+    ${BackToTop()}
   `;
 
   initNavigation();
@@ -47,4 +51,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initProductActions();
   updateFavouriteUI();
   updateCartUI();
+  BackToTopActive();
 });
