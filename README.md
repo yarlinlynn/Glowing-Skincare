@@ -6,10 +6,11 @@ The goal of this project is to recreate the original design while practicing mod
 
 ## 📸 Project Preview
 
-<!-- Add screenshots here -->
-
-<br/>
-
+<p float="left" align="center">
+  <img src="public/images/Glowing.png" width="70%" />
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="public/images/Glowing-mobile.png" width="20%" />
+</p>
 
 ## 📖 About The Project
 
@@ -19,11 +20,8 @@ Instead of using React, Vue, or another component framework, the project uses Ja
 
 ## 🛠️ Technologies Used
 - HTML5
-- JavaScript (ES Modules)
+- JavaScript 
 - Tailwind CSS
-- npm
-- Git/GitHub
-- VS Code
 
 
 ## 📁 Project Structure
