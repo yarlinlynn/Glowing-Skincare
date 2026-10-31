@@ -6,7 +6,7 @@ export function Sidebar() {
             <div class="mobile-nav" data-navbar>
                 <div class="flex justify-between items-center mbe-[55px]">
                     <a href="#">
-                        <img src="/images/logo.png" alt="Glowing" loading="lazy" width="179" height="26"/>
+                        <img src="${import.meta.env.BASE_URL}images/logo.png" alt="Glowing" loading="lazy" width="179" height="26"/>
                     </a>
 
                     <button class="nav-close-btn text-[var(--hoockers-green)] text-[28px]" aria-label="close menu" data-nav-close>

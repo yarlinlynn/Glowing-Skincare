@@ -103,10 +103,10 @@ export function Footer() {
                     </div>
 
                     <a href="#" class="hidden lg:block">
-                        <img src="/images/logo.png" width="179" height="26" loading="lazy" alt="Glowing">
+                        <img src="${import.meta.env.BASE_URL}images/logo.png" width="179" height="26" loading="lazy" alt="Glowing">
                     </a>
 
-                    <img src="/images/pay.png" width="313" height="28" alt="available all payment method" class="w-full max-w-max">
+                    <img src="${import.meta.env.BASE_URL}images/pay.png" width="313" height="28" alt="available all payment method" class="w-full max-w-max">
                 </div>
             </div>
         </footer>
